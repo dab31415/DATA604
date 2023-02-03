@@ -1,0 +1,25 @@
+Ran repeatedly limiting one of the resources to identify the minimum needed to maintain 10 minute average wait time.
+For example, 8 cashiers, 100 servers, and 100 ushers generated an average wait time of 11 minutes and 28 seconds. This would indicate that we must have at least 9 cashiers.
+Using the same process, we see that we must have at least 5 servers and only 1 usher.
+
+Using these numbers as a baseline, the simulation suggests 9 cashiers, 6 servers, and 1 usher is will produce an average wait time of 10 minutes.
+
+
+
+
+
+Use seconds as the time period for better results
+Are the distributions of min-max times normal, or follow some other distribution.
+Concession choice based on number of moviegoers waiting
+
+
+
+I am not entirely sure what was to be submitted to demonstrate that we have installed Simio and Python. For SImio, I have completed the installation and watched the getting started video. I played around briefly trying to implement something like the Python theater, but was missing something and it didn't run like I would have expected.
+
+I implemented the Python theater simulation following the linked article, which is attached, although it's really just copy and paste. 
+
+My initial thoughts of the simulation were to try to identify the minimum number of cashiers, servers, and ushers needed to maintain an average wait time of 10 minutes. I used a process where I placed large counts on two of the resources, essentially only limiting one at a time. I found that you must have at least 9 cashiers, 6 servers, and 1 usher to maintain an average of 10 minutes. When I applied these numbers to the simulation, I found that combination wasn't enough. The combination of 9 cashiers, 6 servers, and 1 usher kept the average wait time to 10 minutes.
+
+I have a few thougts about the simulation. The first was to change the process time of cashiers and servers to seconds, or fractions of a minute, for a more realistic process time. Another thought about the process time for cashiers and servers is if the data determining the range of times is normally distributed. This might change the implementation of the process time for those resources. The third thought I has was for the decision for movie goers at the concession stand. The current implementation is a 50/50 split, but that decision might be based on the number of people waiting to be served at the concession stand. People may be more inclined to skip the popcorn if the lines there are long. This brings another point about those people that will leave a line if they've waited to long for a server.
+
+In my professional duties, the activity that most resembles this process is our drive-thru wait times. We have a system that measures how long cars wait from the time they reach the ordering point, to leaving the pickup window. This isn't a system that my team has anything to do with beyond installing it, but the data comes back to our systems and each restaurant is judged on their speed of service. 
